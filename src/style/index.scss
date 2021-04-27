@@ -1,0 +1,9 @@
+@import './variables';
+
+body {
+    margin: 0;
+    font-family: $roboto-regular !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

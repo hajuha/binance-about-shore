@@ -1,0 +1,50 @@
+$roboto-light: 'Roboto-Light';
+$roboto-regular: 'Roboto-Regular';
+$roboto-semiBold: 'Roboto-Bold';
+
+@font-face {
+    font-family: $roboto-light;
+    src: url('../assets/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: $roboto-regular;
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: $roboto-semiBold;
+    src: url('../assets/fonts/Roboto-Bold.ttf');
+}
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+// New color
+$color-primary: #6c5ce7;
+$color-red: #fb6376;
+$color-light-blue: #b2bec3;
+$color-white: #ffffff;
+$color-light-gray-bg: #f4f4f4;
+$color-bg: #f0f2f5;
+$color-line: #e4e4e4;
+$color-black: #000000;
+$color-light-gray: #636e72;
+$color-dark-blue: #2d3748;
+$color-exodus-fruit: #6c5ce7;
+$color-persian-blue: #1c3faa;
+$color-cerulean-blue: #2649b7;
+$color-egg-blue: #00cec9;
+$color-pink: #e84393;
+
+// Old color
+$color-ebony-clay: #263146;
+$color-gray: #9ba3b7;
+$color-brown: #666666;
+$color-gray-bg: #f3f3f3;
+$color-gray2: #807878;
+

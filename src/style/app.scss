@@ -1,0 +1,100 @@
+@import './variables';
+
+.home-page {
+    background-color: $color-primary;
+
+    .home-box {
+        background-color: $color-white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+
+        .ant-table-wrapper {
+            overflow: scroll;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            .submit {
+                color: $color-white;
+                background-color: rgb(28, 63, 170);
+                height: 40px;
+                border-radius: 8px;
+                font: $fw-bold 20px $roboto-semiBold;
+            }
+
+            .start {
+                color: $color-black;
+                background-color: $color-white;
+                height: 40px;
+                border-radius: 8px;
+                font: $fw-bold 20px $roboto-semiBold;
+                margin-left: 24px;
+            }
+        }
+
+        .add-candidate {
+            display: inline-block;
+            margin: auto;
+            padding: 24px;
+            width: 50%;
+
+            .title {
+                font: $fw-bold 20px $roboto-semiBold;
+            }
+
+            .input-field {
+                display: flex;
+                .ant-form-item-label > label {
+                    font-size: 18px;
+                    width: 120px;
+                }
+
+                .ant-input {
+                    height: 48px;
+                }
+                
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+
+                .submit {
+                    color: $color-white;
+                    background-color: rgb(28, 63, 170);
+                    height: 40px;
+                    border-radius: 8px;
+                    font: $fw-bold 20px $roboto-semiBold;
+                }
+
+                .start {
+                    color: $color-black;
+                    background-color: $color-white;
+                    height: 40px;
+                    border-radius: 8px;
+                    font: $fw-bold 20px $roboto-semiBold;
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        .table {
+            width: 60%;
+            margin: auto;
+            margin-top: 30px;
+
+            .ant-table {
+                font: $fw-medium 20px $roboto-regular;
+            }
+           
+        }
+    }
+    padding: 32px;
+}
