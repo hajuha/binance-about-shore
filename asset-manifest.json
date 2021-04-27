@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/binance-about-shore/static/css/main.91693b62.chunk.css",
+    "main.css": "/binance-about-shore/static/css/main.7e4fd6ae.chunk.css",
     "main.js": "/binance-about-shore/static/js/main.5f8a0f09.chunk.js",
     "main.js.map": "/binance-about-shore/static/js/main.5f8a0f09.chunk.js.map",
     "runtime-main.js": "/binance-about-shore/static/js/runtime-main.2e53789b.js",
@@ -12,7 +12,7 @@
     "static/js/3.7e08df6d.chunk.js.map": "/binance-about-shore/static/js/3.7e08df6d.chunk.js.map",
     "index.html": "/binance-about-shore/index.html",
     "static/css/2.21faa3a9.chunk.css.map": "/binance-about-shore/static/css/2.21faa3a9.chunk.css.map",
-    "static/css/main.91693b62.chunk.css.map": "/binance-about-shore/static/css/main.91693b62.chunk.css.map",
+    "static/css/main.7e4fd6ae.chunk.css.map": "/binance-about-shore/static/css/main.7e4fd6ae.chunk.css.map",
     "static/js/2.6d5c9744.chunk.js.LICENSE.txt": "/binance-about-shore/static/js/2.6d5c9744.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/binance-about-shore/static/media/Roboto-Regular.03523cf5.ttf"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.2e53789b.js",
     "static/css/2.21faa3a9.chunk.css",
     "static/js/2.6d5c9744.chunk.js",
-    "static/css/main.91693b62.chunk.css",
+    "static/css/main.7e4fd6ae.chunk.css",
     "static/js/main.5f8a0f09.chunk.js"
   ]
 }
