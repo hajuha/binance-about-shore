@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/binance-about-shore/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/binance-about-shore/static/js/main.09a84bf9.chunk.js",
+    "main.js.map": "/binance-about-shore/static/js/main.09a84bf9.chunk.js.map",
+    "runtime-main.js": "/binance-about-shore/static/js/runtime-main.65ac362d.js",
+    "runtime-main.js.map": "/binance-about-shore/static/js/runtime-main.65ac362d.js.map",
+    "static/js/2.96a7ca7d.chunk.js": "/binance-about-shore/static/js/2.96a7ca7d.chunk.js",
+    "static/js/2.96a7ca7d.chunk.js.map": "/binance-about-shore/static/js/2.96a7ca7d.chunk.js.map",
+    "static/js/3.363faf0e.chunk.js": "/binance-about-shore/static/js/3.363faf0e.chunk.js",
+    "static/js/3.363faf0e.chunk.js.map": "/binance-about-shore/static/js/3.363faf0e.chunk.js.map",
+    "index.html": "/binance-about-shore/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/binance-about-shore/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.96a7ca7d.chunk.js.LICENSE.txt": "/binance-about-shore/static/js/2.96a7ca7d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/binance-about-shore/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65ac362d.js",
+    "static/js/2.96a7ca7d.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.09a84bf9.chunk.js"
+  ]
+}
