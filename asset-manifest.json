@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/binance-about-shore/static/css/main.7e4fd6ae.chunk.css",
-    "main.js": "/binance-about-shore/static/js/main.5f8a0f09.chunk.js",
-    "main.js.map": "/binance-about-shore/static/js/main.5f8a0f09.chunk.js.map",
-    "runtime-main.js": "/binance-about-shore/static/js/runtime-main.2e53789b.js",
-    "runtime-main.js.map": "/binance-about-shore/static/js/runtime-main.2e53789b.js.map",
+    "main.css": "/binance-about-shore/static/css/main.d9af3999.chunk.css",
+    "main.js": "/binance-about-shore/static/js/main.88be0e47.chunk.js",
+    "main.js.map": "/binance-about-shore/static/js/main.88be0e47.chunk.js.map",
+    "runtime-main.js": "/binance-about-shore/static/js/runtime-main.0d1e09b9.js",
+    "runtime-main.js.map": "/binance-about-shore/static/js/runtime-main.0d1e09b9.js.map",
     "static/css/2.21faa3a9.chunk.css": "/binance-about-shore/static/css/2.21faa3a9.chunk.css",
-    "static/js/2.6d5c9744.chunk.js": "/binance-about-shore/static/js/2.6d5c9744.chunk.js",
-    "static/js/2.6d5c9744.chunk.js.map": "/binance-about-shore/static/js/2.6d5c9744.chunk.js.map",
-    "static/js/3.7e08df6d.chunk.js": "/binance-about-shore/static/js/3.7e08df6d.chunk.js",
-    "static/js/3.7e08df6d.chunk.js.map": "/binance-about-shore/static/js/3.7e08df6d.chunk.js.map",
+    "static/js/2.8d4a0757.chunk.js": "/binance-about-shore/static/js/2.8d4a0757.chunk.js",
+    "static/js/2.8d4a0757.chunk.js.map": "/binance-about-shore/static/js/2.8d4a0757.chunk.js.map",
+    "static/js/3.d8c96056.chunk.js": "/binance-about-shore/static/js/3.d8c96056.chunk.js",
+    "static/js/3.d8c96056.chunk.js.map": "/binance-about-shore/static/js/3.d8c96056.chunk.js.map",
     "index.html": "/binance-about-shore/index.html",
     "static/css/2.21faa3a9.chunk.css.map": "/binance-about-shore/static/css/2.21faa3a9.chunk.css.map",
-    "static/css/main.7e4fd6ae.chunk.css.map": "/binance-about-shore/static/css/main.7e4fd6ae.chunk.css.map",
-    "static/js/2.6d5c9744.chunk.js.LICENSE.txt": "/binance-about-shore/static/js/2.6d5c9744.chunk.js.LICENSE.txt",
+    "static/css/main.d9af3999.chunk.css.map": "/binance-about-shore/static/css/main.d9af3999.chunk.css.map",
+    "static/js/2.8d4a0757.chunk.js.LICENSE.txt": "/binance-about-shore/static/js/2.8d4a0757.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/binance-about-shore/static/media/Roboto-Regular.03523cf5.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e53789b.js",
+    "static/js/runtime-main.0d1e09b9.js",
     "static/css/2.21faa3a9.chunk.css",
-    "static/js/2.6d5c9744.chunk.js",
-    "static/css/main.7e4fd6ae.chunk.css",
-    "static/js/main.5f8a0f09.chunk.js"
+    "static/js/2.8d4a0757.chunk.js",
+    "static/css/main.d9af3999.chunk.css",
+    "static/js/main.88be0e47.chunk.js"
   ]
 }
