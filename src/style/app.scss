@@ -37,11 +37,11 @@
             }
         }
 
-        .add-candidate {
-            display: inline-block;
+        .add-order {
+            // display: inline-block;
             margin: auto;
             padding: 24px;
-            width: 50%;
+            // width: 50%;
 
             .title {
                 font: $fw-bold 20px $roboto-semiBold;
@@ -50,12 +50,12 @@
             .input-field {
                 display: flex;
                 .ant-form-item-label > label {
-                    font-size: 18px;
+                    font-size: 14px;
                     width: 120px;
                 }
 
                 .ant-input {
-                    height: 48px;
+                    height: 30px;
                 }
                 
             }

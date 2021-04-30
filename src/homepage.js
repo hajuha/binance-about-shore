@@ -1,26 +1,11 @@
 import './style/app.scss';
 import 'antd/dist/antd.css';
-import { Button, Select, Space, Table, Tabs } from 'antd';
+import { Button, Input, Select, Space, Table, Form, InputNumber } from 'antd';
 import binanceAPI from './utils/binance';
 import { useEffect, useState } from 'react';
 const { Option } = Select;
 
-const dataSource = [
-    {
-        volume: 7148,
-        entryPrice: 0.001436,
-        symbol: 'WINUSDT',
-        currentPrice: 0,
-        pnl: 0,
-    },
-    {
-        volume: 0.0538,
-        entryPrice: 568.3,
-        symbol: 'BNBUSDT',
-        currentPrice: 0,
-        pnl: 0,
-    },
-];
+const dataSource = JSON.parse(localStorage.getItem('dataSource')) || [];
 
 const Home = () => {
     const [symbols, setSymbols] = useState([]);
@@ -39,14 +24,13 @@ const Home = () => {
             const new_data = await Promise.all(
                 _data.map(async (item) => {
                     const price = await getPrice(item.symbol);
-
                     const pnl = profitCalculate(
                         item.volume,
                         item.entryPrice,
                         price
                     );
 
-                    total += profitCalculate(item.volume, 0, price);
+                    total += pnl;
 
                     return {
                         ...item,
@@ -55,8 +39,6 @@ const Home = () => {
                     };
                 })
             );
-
-            console.log(new_data);
             setTotal(total);
             setData(new_data);
         }, 1000);
@@ -75,7 +57,9 @@ const Home = () => {
     };
 
     const profitCalculate = (volume, entryPrice, currentPrice) => {
-        return (volume * (currentPrice - entryPrice) * 99.9) / 100;
+        const diff = (currentPrice) - entryPrice;
+        // console.log(diff);
+        return (volume * diff * 99.9) / 100;
     };
 
     const columns = [
@@ -95,7 +79,7 @@ const Home = () => {
             dataIndex: 'entryPrice',
             key: 'entryPrice',
             render: (pnl) => (
-                <>{(Math.round(pnl * 1000) / 1000).toFixed(3)} $</>
+                <>{(Math.round(pnl * 100000) / 100000).toFixed(5)} $</>
             ),
         },
 
@@ -104,7 +88,7 @@ const Home = () => {
             dataIndex: 'currentPrice',
             key: 'currentPrice',
             render: (pnl) => (
-                <>{(Math.round(pnl * 1000) / 1000).toFixed(3)} $</>
+                <>{(Math.round(pnl * 100000) / 100000).toFixed(5)} $</>
             ),
         },
         {
@@ -114,28 +98,95 @@ const Home = () => {
             render: (pnl) => <>{(Math.round(pnl * 100) / 100).toFixed(2)} $</>,
         },
     ];
+
+    const onFinish = (values) => {
+        let _data = data;
+
+        const newOrder = {
+            volume: values.volume,
+            entryPrice: values.entryPrice,
+            symbol: values.symbol,
+            currentPrice: 0,
+            pnl: 0,
+        };
+
+        _data.push(newOrder);
+
+        localStorage.setItem('dataSource', JSON.stringify(_data));
+        window.location.reload();
+    };
+
+    const clearCache = () => {
+        localStorage.removeItem('dataSource');
+        window.location.reload();
+    };
+
     return (
         <div className='home-page'>
-            <Button>
-                {(Math.round((total + 0.03) * 100) / 100).toFixed(2)} $
-            </Button>
             <div className='home-box'>
-                <Select
-                    showSearch
-                    optionFilterProp='children'
-                    filterOption={(input, option) =>
-                        option.props.children
-                            .toLowerCase()
-                            .indexOf(input.toLowerCase()) >= 0
-                    }>
-                    {symbols.map((symbol) => {
-                        return (
-                            <Option value={symbol} key={symbol}>
-                                {symbol}
-                            </Option>
-                        );
-                    })}
-                </Select>
+                <Form
+                    name='basic'
+                    initialValues={{ remember: true }}
+                    onFinish={onFinish}
+                    className='add-order'>
+                    <Form.Item
+                        label='Pairs'
+                        name='symbol'
+                        className='input-field'>
+                        <Select
+                            showSearch
+                            optionFilterProp='children'
+                            filterOption={(input, option) =>
+                                option.props.children
+                                    .toLowerCase()
+                                    .indexOf(input.toLowerCase()) >= 0
+                            }>
+                            {symbols.map((symbol) => {
+                                return (
+                                    <Option value={symbol} key={symbol}>
+                                        {symbol}
+                                    </Option>
+                                );
+                            })}
+                        </Select>
+                    </Form.Item>
+                    <Form.Item
+                        label='Volume'
+                        name='volume'
+                        className='input-field'>
+                        <InputNumber />
+                    </Form.Item>
+
+                    <Form.Item
+                        label='Entry price'
+                        name='entryPrice'
+                        className='input-field'>
+                        <InputNumber />
+                    </Form.Item>
+
+                    <div className='buttons'>
+                        <Form.Item>
+                            <Button
+                                type='primary'
+                                htmlType='submit'
+                                className='submit'>
+                                Submit
+                            </Button>
+                        </Form.Item>
+
+                        <Form.Item>
+                            <Button
+                                onClick={() => clearCache()}
+                                type='primary'
+                                className='submit'>
+                                Clear cache
+                            </Button>
+                        </Form.Item>
+                    </div>
+                </Form>
+                <Button className='buttons'>
+                    Total profit: {(Math.round(total * 100) / 100).toFixed(2)} $
+                </Button>
                 <Table columns={columns} dataSource={data} />
             </div>
         </div>
